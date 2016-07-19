@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "836820009081",
+    "firebase_url": "https://noveoschool.firebaseio.com",
+    "project_id": "noveoschool",
+    "storage_bucket": "noveoschool.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:836820009081:android:54108a20f609f885",
+        "android_client_info": {
+          "package_name": "com.school.noveo.noveoschool"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "836820009081-051me6k31vf2kpmhnml162881ef41qu9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnvnAzmfeTEk4zcCIupe_XhJw1nPYaWcc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:836820009081:android:ecefebf36c9103ae",
+        "android_client_info": {
+          "package_name": "com.school.noveo.notifications"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "836820009081-051me6k31vf2kpmhnml162881ef41qu9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnvnAzmfeTEk4zcCIupe_XhJw1nPYaWcc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
