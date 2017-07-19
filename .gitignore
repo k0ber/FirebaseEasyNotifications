@@ -1,8 +1,17 @@
-*.iml
-.gradle
-/local.properties
-/.idea/workspace.xml
-/.idea/libraries
+# Mac OS
 .DS_Store
-/build
-/captures
+
+# Android
+local.properties
+gradle.properties
+
+# Gradle
+.gradle
+build
+
+# IntelliJ Idea
+.idea
+*.iml
+
+# Native code build
+app/.externalNativeBuild/
