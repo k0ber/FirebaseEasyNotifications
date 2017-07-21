@@ -14,7 +14,7 @@ import com.google.firebase.messaging.RemoteMessage;
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
-    private static final String TAG = "MyFirebaseMsgService";
+    private static final String TAG = "MessagingService";
 
     /**
      * Called when message is received.
@@ -31,8 +31,10 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         // and data payloads are treated as notification messages. The Firebase console always sends notification
         // messages. For more see: https://firebase.google.com/docs/cloud-messaging/concept-options
 
-        Log.d(TAG, "From: " + remoteMessage.getFrom());
-        Log.d(TAG, "Notification Message Body: " + remoteMessage.getNotification().getBody());
+        Log.d(TAG, "From: " + ((remoteMessage == null) ? "null" : remoteMessage.getFrom()));
+        final String body = remoteMessage == null ? null : remoteMessage.getNotification() == null ? null :
+                remoteMessage.getNotification().getBody();
+        Log.d(TAG, "Notification Message Body: " + ((body == null) ? "null" : body));
 
         sendNotification("got a notification");
     }
