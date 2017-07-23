@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Notifications</string>
     <string name="noveo_school_label">Noveo School</string>
+    <string name="send_notification">Send notification</string>
+    <string name="bigText">Ten heavy boots Over the ground, soaked with blood Marching in step Those 5 warriors They don\'t mind How their wounds Hit by enemy swords Are hurting down to the bones The longed-for revenge Committed in blood They\'ve shown no mercy They\'ve shown no mercy Denying the pain Who is pounding like a hammer Suffered from falls From deadly striked horses No sign of weakness Still carefulness Not even a gleam Of regret in their eyes They striked the men deadly Fed the wolves with meat And now they leave that country Side by side Now on their way home The 5 warriors who fought without regret That story of 5 brave men Is going to be told eternally Only the grief remains Only the women alone The children are bewailing Living in fear from now on No man remains spared No house, no farm remained No Christian (female) remained not defiled Her church burning in fire Her iron shined red By her enemies\' blood Telling about the victory Which was given by the gods When they returned Blooding but proud The horizon is burning And the song sounds loudly</string>
+    <string name="cancel_notifications">Cancel notifications</string>
+    <string name="text_label_reply">Reply...</string>
 </resources>
