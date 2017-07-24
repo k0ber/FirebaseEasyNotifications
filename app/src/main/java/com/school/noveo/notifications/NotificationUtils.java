@@ -6,9 +6,12 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Build;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.RemoteInput;
+import android.support.v4.content.ContextCompat;
 import android.widget.RemoteViews;
 
 import java.util.concurrent.TimeUnit;
@@ -22,11 +25,11 @@ class NotificationUtils {
     private static final String KEY_PRESSED_ACTION = "reply_action";
     private static final String LABEL_REPLY = "Reply";
 
-    private static final int SIMPLE_NOTIFICATION_ID = 555;
-    private static final int BIG_TEXT_NOTIFICATION_ID = 555;
-    private static final int BIG_PICTURE_NOTIFICATION_ID = 555;
-    private static final int INBOX_NOTIFICATION_ID = 555;
-    private static final int MEDIA_NOTIFICATION_ID = 555;
+    private static final int SIMPLE_NOTIFICATION_ID = 550;
+    private static final int BIG_TEXT_NOTIFICATION_ID = 551;
+    private static final int BIG_PICTURE_NOTIFICATION_ID = 552;
+    private static final int INBOX_NOTIFICATION_ID = 553;
+    private static final int MEDIA_NOTIFICATION_ID = 554;
     private static final int REPLY_NOTIFICATION_ID = 555;
     private static final int PROGRESS_NOTIFICATION_ID = 556;
     private static final int CUSTOM_NOTIFICATION_ID = 557;
@@ -35,13 +38,13 @@ class NotificationUtils {
     static void sendNotification(Context context) {
         NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         notificationManager.notify(SIMPLE_NOTIFICATION_ID, buildSimpleNotification(context));
-        notificationManager.notify(BIG_TEXT_NOTIFICATION_ID, buildBigTextNotification(context));
-        notificationManager.notify(BIG_PICTURE_NOTIFICATION_ID, buildBigPictureNotification(context));
-        notificationManager.notify(INBOX_NOTIFICATION_ID, buildInboxNotification(context));
-        notificationManager.notify(MEDIA_NOTIFICATION_ID, buildMediaNotification(context));
-        notificationManager.notify(REPLY_NOTIFICATION_ID, buildRemoteInputNotification(context));
-        showProgressNotification(context);
-        showCustomNotification(context);
+//        notificationManager.notify(BIG_TEXT_NOTIFICATION_ID, buildBigTextNotification(context));
+//        notificationManager.notify(BIG_PICTURE_NOTIFICATION_ID, buildBigPictureNotification(context));
+//        notificationManager.notify(INBOX_NOTIFICATION_ID, buildInboxNotification(context));
+//        notificationManager.notify(MEDIA_NOTIFICATION_ID, buildMediaNotification(context));
+//        notificationManager.notify(REPLY_NOTIFICATION_ID, buildRemoteInputNotification(context));
+//        showProgressNotification(context);
+//        showCustomNotification(context);
     }
 
     static void cancelReplyNotification(Context context) {
@@ -50,9 +53,9 @@ class NotificationUtils {
     }
 
     private static Notification buildSimpleNotification(Context context) {
-//        Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+        Uri defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         return new NotificationCompat.Builder(context)
-                .setSmallIcon(R.mipmap.ic_launcher) // android.R.drawable.ic_dialog_email
+                .setSmallIcon(android.R.drawable.ic_dialog_email)
 //                .setContentTitle("Title")
 //                .setContentText("Message")
 //                .setLargeIcon(BitmapFactory.decodeResource(context.getResources(), R.drawable.image))
@@ -66,15 +69,15 @@ class NotificationUtils {
                 .build();
     }
 
-    private static Notification buildBigTextNotification(Context context) {
-        return new NotificationCompat.Builder(context)
-                .setSmallIcon(android.R.drawable.ic_dialog_email)
-                .setContentTitle("Title")
-                .setContentText("Message")
-                .setStyle(new NotificationCompat.BigTextStyle()
-                        .bigText(context.getString(R.string.bigText)))
-                .build();
-    }
+//    private static Notification buildBigTextNotification(Context context) {
+//        return new NotificationCompat.Builder(context)
+//                .setSmallIcon(android.R.drawable.ic_dialog_email)
+//                .setContentTitle("Title")
+//                .setContentText("Message")
+//                .setStyle(new NotificationCompat.BigTextStyle()
+//                        .bigText(context.getString(R.string.bigText)))
+//                .build();
+//    }
 
     private static Notification buildBigPictureNotification(Context context) {
         return new NotificationCompat.Builder(context)
@@ -100,7 +103,7 @@ class NotificationUtils {
     }
 
     private static Notification buildMediaNotification(Context context) {
-        return new NotificationCompat.Builder(context)
+        return new android.support.v7.app.NotificationCompat.Builder(context)
                 .setSmallIcon(android.R.drawable.ic_dialog_email)
                 .setContentTitle("Title")
                 .setContentText("Message")
